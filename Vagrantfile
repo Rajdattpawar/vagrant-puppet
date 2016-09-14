@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   
 	config.vm.box = "ubuntu/trusty64"
   
-    config.vm.define "puppet" do |puppet|
+    	config.vm.define "puppet" do |puppet|
 		puppet.vm.network "private_network", ip: '192.168.33.11'
 		puppet.vm.hostname = 'puppet.vup.local'
 		puppet.vm.provision :hosts, :sync_hosts => true	
